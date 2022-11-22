@@ -1,7 +1,7 @@
 python3 << EOF
-# Imports Python modules to be used by the plugin.
-print(" - : = ")
+def say_hi():
+    print("Tonigth , we are young")
 EOF
 function! example-plugin#DefineWord()
-    python3 get_word_definitions()
+  python3 say_hi()
 endfunction
