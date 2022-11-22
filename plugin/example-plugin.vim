@@ -7,6 +7,9 @@
 " variable exists, do nothing more. Otherwise, assign the loaded
 " variable and continue running this instance of the plugin.
 
-
+if exists("g:loaded_example-plugin")
+    finish
+endif
+let g:loaded_example-plugin = 1
 " Exposes the plugin's functions for use as commands in Vim.
 command! -nargs=0 DefineWord call example-plugin#DefineWord()
