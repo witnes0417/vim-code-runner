@@ -5,4 +5,4 @@
 
 
 " Call the function SayHelloVim
-command! DefineHi call example-plugin#DefineWord()
+command! DefineHi call example-plugin#defineword()
