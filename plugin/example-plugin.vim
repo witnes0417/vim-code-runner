@@ -1,7 +1,7 @@
-" Title:        Example Plugin
-" Description:  A plugin to provide an runcode for creating Vim plugins.
-" Last Change:  8 November 2021
-" Maintainer:   Example User <https://github.com/runcode_user>
+" Title:        vim runcode plugin header
+" Description:  A plugin provide an build and run funciton in vim
+" Last Change:  23/2/3
+" Maintainer:   witness0417 <https://github.com/witness0417>
 
 " Prevents the plugin from being loaded multiple times. If the loaded
 " variable exists, do nothing more. Otherwise, assign the loaded
@@ -12,6 +12,8 @@ endif
 let g:loaded_runcode = 1
 
 " Exposes the plugin's functions for use as commands in Vim.
-command! -nargs=0 RunCodeTest  call runcode#Test()
+command! -nargs=0 RunCodeTest		call runcode#Test()
+command! -nargs=0 RunCode      		call runcode#RunCode()
+command! -nargs=0 DebugCode    		call runcode#DebugCode()
 noremap <Leader>rc :call runcode#RunCode()<CR>
 noremap <Leader>dc :call runcode#DebugCode()<CR>
