@@ -41,5 +41,10 @@ function! runcode#DebugCode()
 	endif
 	execute "!gdb -d ".g:projRoot."/src ".g:projRoot."/myapp"
 endfunction
+"load vimrc
+function! runcode#LoadVimrc()
+	execute "wa"
+	execute 'source $MYVIMRC'
+endfunction
 
 

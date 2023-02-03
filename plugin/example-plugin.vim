@@ -15,5 +15,8 @@ let g:loaded_runcode = 1
 command! -nargs=0 RunCodeTest		call runcode#Test()
 command! -nargs=0 RunCode      		call runcode#RunCode()
 command! -nargs=0 DebugCode    		call runcode#DebugCode()
+command! -nargs=0 LoadVimrc    		call runcode#LoadVimrc()
+
 noremap <Leader>rc :call runcode#RunCode()<CR>
 noremap <Leader>dc :call runcode#DebugCode()<CR>
+noremap <Leader>lv :call runcode#LoadVimrc()<CR>
